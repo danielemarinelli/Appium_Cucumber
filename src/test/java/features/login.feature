@@ -5,17 +5,17 @@ Feature: Testing login to pocket shop
   Scenario Outline: Testing login to pocket shop
     Given User opens pocket shop app
     When  User inserts user <user> and password <password>
-    And   User clicks on button login
-    And   User clicks on agree button
+    And   User taps on button login
+    And   User taps on agree button
     Then  User navigates in the personal account
-    When  User clicks on the cart button
-    And   User clicks add product
-    And   User clicks calculate button
+    When  User taps on the cart button
+    And   User taps add product
+    And   User taps calculate button
     Then  The total vat changes
-    And   User clicks on checkout button
-    And   User clicks on confirm button
+    And   User taps on checkout button
+    And   User taps on confirm button
 
     Examples:
       | user |password|
       |chris@aphixsoftware.com|test|
-     # |dan                    |test1|
+      |dan_guest              |test1|

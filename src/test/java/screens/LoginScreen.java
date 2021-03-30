@@ -19,17 +19,16 @@ public class LoginScreen extends LoginStepsDef {
     }
 
     public void login(String username, String pw) throws InterruptedException {
-        List<MobileElement> els1 =  driver.findElementsByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View[3]/android.view.View/android.widget.EditText");
-        els1.get(0).sendKeys(username);
-        List<MobileElement> els3 =  driver.findElementsByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View[4]/android.view.View/android.widget.EditText");
-        els3.get(0).sendKeys(pw);
+        List<MobileElement> userField =  driver.findElementsByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View[3]/android.view.View/android.widget.EditText");
+        userField.get(0).sendKeys(username);
+        List<MobileElement> pwField =  driver.findElementsByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View[4]/android.view.View/android.widget.EditText");
+        pwField.get(0).sendKeys(pw);
         Thread.sleep(3000);
     }
 
     public void pressLogIn(){
-        List<MobileElement> els4 =  driver.findElementsByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.widget.Button");
-        els4.get(0).click();
-        System.out.println();
+        List<MobileElement> btnLogIn =  driver.findElementsByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.widget.Button");
+        btnLogIn.get(0).click();
     }
 
     public boolean verifyCorrectLogInScreen() {
@@ -41,10 +40,9 @@ public class LoginScreen extends LoginStepsDef {
     }
 
     public void pressAgree() throws InterruptedException {
-        List<MobileElement> els6 = driver.findElementsByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.app.Dialog/android.view.View/android.view.View/android.widget.Button[2]");
-        els6.get(0).click();
+        List<MobileElement> btnAgree = driver.findElementsByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.app.Dialog/android.view.View/android.view.View/android.widget.Button[2]");
+        btnAgree.get(0).click();
         Thread.sleep(9000);
-        System.out.println();
     }
 
 }
